@@ -2,7 +2,9 @@ package org.example;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
@@ -34,13 +36,12 @@ public class Main {
         driver.findElement(By.xpath("//*[@id=\"SummaryForm:RulesLinkPanel\"]/ul/li[2]/a")).click();
         Thread.sleep(10000);
         driver.findElement(By.xpath("//*[@id=\"SummaryForm:RulesLinkPanel:j_idt17598\"]")).click();
-        Thread.sleep(10000);
-
-        /*WebElement Add = driver.findElement(By.xpath("//*[@id=\"SummaryForm:addEditUnderwritingruleSubview:ruleGroupNameLabel\"]"));
+        Thread.sleep(15000);
+        WebElement Add = driver.findElement(By.xpath("//*[@id=\"SummaryForm:addEditUnderwritingruleSubview:ruleGroupNameLabel\"]"));
         Add.click();
         Add.sendKeys("Testing Bump Rule");
         driver.findElement(By.xpath("//*[@id=\"SummaryForm:addEditUnderwritingruleSubview:TypeId_label\"]")).click();
-        //Select DD = new Select(DropDown);
+        //Select DD = new Select();
         //DD.selectByValue("Default Rule");
         /*WebElement Description = driver.findElement(By.xpath("//*[@id=\"SummaryForm:addEditUnderwritingruleSubview:ruleUWDescriptionLabel\"]"));
         Description.click();
